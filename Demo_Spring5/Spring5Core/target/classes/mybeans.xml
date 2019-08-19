@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd"
+		default-lazy-init="true"
+		>
+<import resource="demoBean.xml"/>
+<bean id="employee" class="org.cap.pojo.Employee" 
+	init-method="emp_init" destroy-method="emp_destroy" >
+	 <property name="employeeId" value="1001"/>
+	<property name="firstName" value="Tom"/>
+	<property name="lastName" value="Jerry"/>
+	<property name="salary" value="34000"/>
+	
+	
+	
+	
+	<!-- <property name="address" ref="address1"/>  -->
+	<!-- <property name="address">
+		<list>
+			<ref bean="address"/>
+			<ref bean="address1"/>
+			<value>South Avvenue, Delhi</value>
+			<value>West Car St, Mumbai</value>
+		</list>
+	</property>
+	<property name="maps">
+		<map>
+			<entry key="123" value-ref="address"/>
+			<entry key="190" value-ref="address1"/>
+		</map>
+		
+		<props>
+			<prop key="234">Tom</prop>
+		</props>
+		
+	</property> -->
+	
+	<!-- <constructor-arg name="employeeId" value="1234"/>
+	<constructor-arg name="firstName" value="Kamal"/>
+	<constructor-arg name="lastName" value="Singh"/>
+	<constructor-arg name="salary" value="23000"/>
+	<constructor-arg name="address">
+		<list>
+			<ref bean="address"/>
+			<ref bean="address1"/>
+			<value>South Avvenue, Delhi</value>
+			<value>West Car St, Mumbai</value>
+		</list>
+	</constructor-arg>
+	 -->
+	
+	
+	
+</bean>
+
+
+
+<bean id="address" class="org.cap.pojo.Address">
+	<property name="streetName" value="North Avvenue"/>
+	<property name="city" value="Chennai"/>
+</bean>
+
+<bean id="address1" class="org.cap.pojo.Address">
+	<property name="streetName" value="South Avvenue"/>
+	<property name="city" value="Hyderabad"/>
+</bean>
+
+
+<bean id="myBeanPP" class="org.cap.util.MyBeanPPImpl"/>
+
+
+
+
+
+
+
+
+
+
+</beans>
