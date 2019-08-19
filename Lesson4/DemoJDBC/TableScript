@@ -1,0 +1,3 @@
+DROP TABLE EMPLOYEES;
+CREATE TABLE Employees (eid NUMBER(10) primary key,
+ename varchar2(20),esal  NUMBER(10,2));
