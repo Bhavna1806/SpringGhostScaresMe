@@ -8,7 +8,7 @@
   <name>day3-Spring5Rest Maven Webapp</name>
   <url>http://maven.apache.org</url>
    <properties>
-  	<spring.version>5.0.5.RELEASE</spring.version>
+  	<spring.version>5.2.7.RELEASE</spring.version>
   	
   	 <slf4j.version>1.7.5</slf4j.version>
     <log4j.version>1.7.5</log4j.version>
